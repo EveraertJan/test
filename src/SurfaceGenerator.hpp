@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
-#import "ofxHapPlayer.h"
 
 class SurfaceGenerator {
     
@@ -23,7 +22,7 @@ public:
     ofVideoPlayer background;
     ofVideoPlayer foreground;
     ofVideoPlayer foregroundMask;
-    ofxHapPlayer interaction;
+    ofVideoPlayer interaction;
     ofFbo videoFBO;
 
     
