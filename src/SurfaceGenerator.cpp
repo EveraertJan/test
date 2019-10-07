@@ -20,7 +20,7 @@ void SurfaceGenerator::setup() {
     
     
     
-    videoFBO.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA32F_ARB);
+    videoFBO.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     
     videoFBO.begin();
     ofClear(0, 0, 0, 0);
