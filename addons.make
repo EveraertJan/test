@@ -3,5 +3,4 @@ ofxCv
 ofxGui
 ofxOpenCv
 ofxPoco
-ofxPostProcessing
 ofxXmlSettings
