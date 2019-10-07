@@ -1,0 +1,8 @@
+ofxAruco
+ofxCv
+ofxGui
+ofxHapPlayer
+ofxOpenCv
+ofxPoco
+ofxPostProcessing
+ofxXmlSettings
