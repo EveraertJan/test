@@ -12,7 +12,6 @@
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
 
-#include "ofxOMXPlayer.h"
 
 class SurfaceGenerator {
     
@@ -21,11 +20,11 @@ public:
     void update();
     void draw();
 
-    ofxOMXPlayer background;
-    ofxOMXPlayer foreground;
-    ofxOMXPlayer foregroundMask;
-    ofxOMXPlayer interaction;
-    ofxOMXPlayer interactionMask;
+    ofVideoPlayer background;
+    ofVideoPlayer foreground;
+    ofVideoPlayer foregroundMask;
+    ofVideoPlayer interaction;
+    ofVideoPlayer interactionMask;
     ofFbo videoFBO;
 
     
