@@ -33,11 +33,11 @@ void ArucoHandler::setup(){
     
     
 //     setting aruco track
-    grabber.setDeviceID(1);
-    grabber.initGrabber(640, 480);
-    trackVideo = &grabber;
-    
-    aruco.setup("intrinsics.int", trackVideo->getWidth(), trackVideo->getHeight());
+//    grabber.setDeviceID(1);
+//    grabber.initGrabber(640, 480);
+//    trackVideo = &grabber;
+//
+//    aruco.setup("intrinsics.int", trackVideo->getWidth(), trackVideo->getHeight());
     
     surfaceGenerator.setup();
     
@@ -45,29 +45,29 @@ void ArucoHandler::setup(){
 }
 
 void ArucoHandler::update() {
-    if(TRACK) {
-        video.update();
-        trackVideo->update();
-
-        if(trackVideo->isFrameNew()){
-            aruco.detectBoards(trackVideo->getPixels());
-
-        }
-    }
+//    if(TRACK) {
+//        video.update();
+//        trackVideo->update();
+//
+//        if(trackVideo->isFrameNew()){
+//            aruco.detectBoards(trackVideo->getPixels());
+//
+//        }
+//    }
     surfaceGenerator.update();
 }
 
 void ArucoHandler::draw() {
-    trackVideo->draw(0, 0, ofGetWidth(), ofGetHeight());
-
-    
-    vector<aruco::Marker> markers = aruco.getMarkers();
-    for(int i = 0; i < markers.size(); i++) {
-        aruco.begin(i);
+//    trackVideo->draw(0, 0, ofGetWidth(), ofGetHeight());
+//
+//
+//    vector<aruco::Marker> markers = aruco.getMarkers();
+//    for(int i = 0; i < markers.size(); i++) {
+//        aruco.begin(i);
 //        drawMarker(0.15, ofColor::white, markers.at(i).id);
         surfaceGenerator.draw();
-        aruco.end();
-    }
+//        aruco.end();
+//    }
 }
 
 
