@@ -75,7 +75,7 @@ void SurfaceGenerator::draw() {
     
     ofPushMatrix();
     
-    ofScale(0.0005);
+//    ofScale(0.0005);
     ofEnableAlphaBlending();
     videoFBO.draw(0, 0);
     ofDisableAlphaBlending();

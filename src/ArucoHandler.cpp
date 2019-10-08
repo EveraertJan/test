@@ -65,7 +65,7 @@ void ArucoHandler::draw() {
 //    for(int i = 0; i < markers.size(); i++) {
 //        aruco.begin(i);
 //        drawMarker(0.15, ofColor::white, markers.at(i).id);
-        surfaceGenerator.draw();
+    surfaceGenerator.draw();
 //        aruco.end();
 //    }
 }
