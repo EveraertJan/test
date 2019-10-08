@@ -10,44 +10,18 @@
 void SurfaceGenerator::setup() {
     ofEnableAlphaBlending();
     
-    string videoPath = ofToDataPath("water/background.mov", true);
-    ofxOMXPlayerSettings settings;
-    settings.videoPath = videoPath;
-    settings.useHDMIForAudio = true;
-    settings.enableTexture = true;
-    settings.enableLooping = true;
-    background.setup(settings);
-
-    videoPath = ofToDataPath("water/foreground.mov", true);
-    settings.videoPath = videoPath;
-    foreground.setup(settings);
-    
-    
-    videoPath = ofToDataPath("water/foregroundMask.mov", true);
-    settings.videoPath = videoPath;
-    foregroundMask.setup(settings);
-    
-    
-    videoPath = ofToDataPath("water/interaction.mp4", true);
-    settings.videoPath = videoPath;
-    interaction.setup(settings);
-    
-    
-    videoPath = ofToDataPath("water/interactionmask.mp4", true);
-    settings.videoPath = videoPath;
-    interactionMask.setup(settings);
 
     
-//    background.load("water/background.mp4");
-//    background.play();
-//    foreground.load("water/foreground.mov");
-//    foreground.play();
-//    foregroundMask.load("water/foregroundMask.mov");
-//    foregroundMask.play();
-//    interaction.load("water/interaction.mp4");
-//    interaction.play();
-//    interactionMask.load("water/interactionmask.mp4");
-//    interactionMask.play();
+    background.load("water/background.mp4");
+    background.play();
+    foreground.load("water/foreground.mov");
+    foreground.play();
+    foregroundMask.load("water/foregroundMask.mov");
+    foregroundMask.play();
+    interaction.load("water/interaction.mp4");
+    interaction.play();
+    interactionMask.load("water/interactionmask.mp4");
+    interactionMask.play();
     
     
     
@@ -61,13 +35,13 @@ void SurfaceGenerator::setup() {
 
 void SurfaceGenerator::update() {
     
-//    background.update();
-//    foreground.update();
-//    foregroundMask.update();
-//
-//
-//    interaction.update();
-//    interactionMask.update();
+    background.update();
+    foreground.update();
+    foregroundMask.update();
+
+
+    interaction.update();
+    interactionMask.update();
     
     
     videoFBO.begin();
