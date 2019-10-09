@@ -14,13 +14,13 @@ void SurfaceGenerator::setup() {
     
     background.load("water/background.mp4");
     background.play();
-    foreground.load("water/foreground.mov");
+    foreground.load("water/foreground.mp4");
     foreground.play();
-    foregroundMask.load("water/foregroundMask.mov");
+    foregroundMask.load("water/foregroundMask.mp4");
     foregroundMask.play();
     interaction.load("water/interaction.mp4");
     interaction.play();
-    interactionMask.load("water/interactionmask.mp4");
+    interactionMask.load("water/interactionMask.mp4");
     interactionMask.play();
     
     
@@ -100,6 +100,21 @@ void SurfaceGenerator::draw(int drawX, int drawY, int drawWidth, int drawHeight,
     ofScale(scale);
     videoFBO.getTexture().drawSubsection(drawX, drawY, drawWidth, drawHeight, subX, subY, subWidth, subHeight);
     ofPopMatrix();
+    
+}
+
+void SurfaceGenerator::loadNewSource(string source) {
+    
+    background.load(source + "/background.mp4");
+    background.play();
+    foreground.load(source + "/foreground.mp4");
+    foreground.play();
+    foregroundMask.load(source + "/foregroundMask.mp4");
+    foregroundMask.play();
+    interaction.load(source + "/interaction.mp4");
+    interaction.play();
+    interactionMask.load(source + "/interactionMask.mp4");
+    interactionMask.play();
     
 }
 

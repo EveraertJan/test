@@ -19,7 +19,8 @@ public:
     void setup();
     void update();
     void draw(int drawX, int drawY, int drawWidth, int drawHeight, int SOURCE, float scale, int subX, int subY, int subWidth, int subHeight);
-
+    void loadNewSource(string source);
+    
     ofVideoPlayer background;
     ofVideoPlayer foreground;
     ofVideoPlayer foregroundMask;

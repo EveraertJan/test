@@ -16,21 +16,25 @@
 
 #include "ofxAruco.h"
 #include "SurfaceGenerator.hpp"
+#include "ofxXmlSettings.h"
+#include "MarkerClass.hpp"
 
 class ArucoHandler {
 public:
     
     void setup();
     void update();
-    void draw(SurfaceGenerator surfaces);
+    void draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA);
+    void setupSurfaces();
     
-    vector<int> returnMarkerIds();
-    
-    ofVideoPlayer video;
     ofxAruco aruco;
     ofVideoGrabber grabber;
     ofBaseVideoDraws * trackVideo;
     
+    ofxXmlSettings xml;
+
+    vector<MarkerClass> markerList;
+
     
     bool TRACK = false;
 };

@@ -32,6 +32,7 @@ class ofApp : public ofBaseApp{
     ofSoundPlayer sound;
     
     int DISPLAY_MODE = 0;
+    bool DISPLAY_CAMERA = true;
 
 		
 };

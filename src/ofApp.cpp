@@ -23,8 +23,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofClear(0, 0, 0);
     if(DISPLAY_MODE == 0) {
-        aruco.draw(surfaceGenerator);
+        aruco.draw(surfaceGenerator, DISPLAY_CAMERA);
     }
     else {
         presets.draw(surfaceGenerator, DISPLAY_MODE);
@@ -45,6 +46,16 @@ void ofApp::keyPressed(int key){
     }
     if(key == '2') {
         DISPLAY_MODE = 2;
+    }
+    if(key == 'v') {
+        DISPLAY_CAMERA = !DISPLAY_CAMERA;
+    }
+    
+    if(key == 'w'){
+        surfaceGenerator.loadNewSource("water");
+    }
+    if(key == 's'){
+        surfaceGenerator.loadNewSource("space");
     }
 }
 
