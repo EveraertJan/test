@@ -67,7 +67,6 @@ void ArucoHandler::draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA) {
         for(int j = 0; j < markerList.size(); j++) {
             if(markerList.at(j).id == markers.at(i).id) {
                 MarkerClass m = markerList.at(j);
-                std::cout << "scale: " <<  m.scale << endl;
                 surfaces.draw(m.outputX, m.outputY, m.outputWidth, m.outputHeight, 0, m.scale, m.videoX, m.videoY, m.videoWidth, m.videoHeight);
             }
         }
