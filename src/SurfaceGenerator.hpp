@@ -18,13 +18,14 @@ class SurfaceGenerator {
 public:
     void setup();
     void update();
-    void draw();
+    void draw(int drawX, int drawY, int drawWidth, int drawHeight, int SOURCE, float scale, int subX, int subY, int subWidth, int subHeight);
 
     ofVideoPlayer background;
     ofVideoPlayer foreground;
     ofVideoPlayer foregroundMask;
     ofVideoPlayer interaction;
     ofVideoPlayer interactionMask;
+    
     ofFbo videoFBO;
 
     

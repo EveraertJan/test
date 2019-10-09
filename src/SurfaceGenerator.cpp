@@ -93,10 +93,12 @@ void SurfaceGenerator::update() {
     
 }
 
-void SurfaceGenerator::draw() {
+void SurfaceGenerator::draw(int drawX, int drawY, int drawWidth, int drawHeight, int SOURCE, float scale, int subX, int subY, int subWidth, int subHeight) {
+    
     
     ofPushMatrix();
-    videoFBO.draw(0, 0);
+    ofScale(scale);
+    videoFBO.getTexture().drawSubsection(drawX, drawY, drawWidth, drawHeight, subX, subY, subWidth, subHeight);
     ofPopMatrix();
     
 }

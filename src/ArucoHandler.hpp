@@ -22,7 +22,7 @@ public:
     
     void setup();
     void update();
-    void draw();
+    void draw(SurfaceGenerator surfaces);
     
     vector<int> returnMarkerIds();
     
@@ -31,7 +31,6 @@ public:
     ofVideoGrabber grabber;
     ofBaseVideoDraws * trackVideo;
     
-    SurfaceGenerator surfaceGenerator;
     
     bool TRACK = false;
 };

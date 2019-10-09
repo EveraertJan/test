@@ -2,7 +2,8 @@
 
 #include "ofMain.h"
 #include "ArucoHandler.hpp"
-
+#include "SurfaceGenerator.hpp"
+#include "PresetSurfaceClass.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -25,8 +26,12 @@ class ofApp : public ofBaseApp{
     
     
     ArucoHandler aruco;
+    SurfaceGenerator surfaceGenerator;
+    PresetSurfaceClass presets;
     
     ofSoundPlayer sound;
+    
+    int DISPLAY_MODE = 0;
 
 		
 };

@@ -8,18 +8,27 @@ void ofApp::setup(){
     sound.load("space.wav");
     sound.setVolume(10);
 //    sound.play();
+    
+    surfaceGenerator.setup();
+    
+    presets.setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     aruco.update();
+    surfaceGenerator.update();
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
-    aruco.draw();
-
+    if(DISPLAY_MODE == 0) {
+        aruco.draw(surfaceGenerator);
+    }
+    else {
+        presets.draw(surfaceGenerator, DISPLAY_MODE);
+    }
 }
 
 //--------------------------------------------------------------
@@ -27,6 +36,15 @@ void ofApp::keyPressed(int key){
     
     if(key == 't') {
         aruco.TRACK = true;
+    }
+    if(key == '0') {
+        DISPLAY_MODE = 0;
+    }
+    if(key == '1') {
+        DISPLAY_MODE = 1;
+    }
+    if(key == '2') {
+        DISPLAY_MODE = 2;
     }
 }
 
