@@ -5,14 +5,14 @@
       <video>
         <startX>0</startX>
         <startY>0</startY>
-        <width>500</width>
-        <height>400</height>
+        <width>1024</width>
+        <height>768</height>
       </video>
       <handle>Wall</handle>
       <width>1000</width>
-      <height>1000</height>
-      <xOffset>250</xOffset>
-      <yOffset>250</yOffset>
+      <height>600</height>
+      <xOffset>500</xOffset>
+      <yOffset>500</yOffset>
       <zOffset>0</zOffset>
       <xRotation>90</xRotation>
       <yRotation>0</yRotation>
@@ -22,12 +22,12 @@
       <video>
         <startX>0</startX>
         <startY>0</startY>
-        <width>500</width>
-        <height>400</height>
+        <width>1024</width>
+        <height>768</height>
       </video>
       <handle>Wall</handle>
       <width>1000</width>
-      <height>1000</height>
+      <height>600</height>
       <xOffset>-250</xOffset>
       <yOffset>-250</yOffset>
       <zOffset>0</zOffset>
@@ -39,12 +39,12 @@
       <video>
         <startX>0</startX>
         <startY>0</startY>
-        <width>500</width>
-        <height>400</height>
+        <width>1024</width>
+        <height>768</height>
       </video>
       <handle>Wall</handle>
       <width>1000</width>
-      <height>1000</height>
+      <height>600</height>
       <xOffset>250</xOffset>
       <yOffset>-250</yOffset>
       <zOffset>-500</zOffset>
@@ -58,8 +58,8 @@
       <video>
         <startX>0</startX>
         <startY>0</startY>
-        <width>500</width>
-        <height>400</height>
+        <width>1024</width>
+        <height>768</height>
       </video>
       <handle>Wall</handle>
       <width>2000</width>
@@ -75,8 +75,8 @@
       <video>
         <startX>0</startX>
         <startY>0</startY>
-        <width>200</width>
-        <height>300</height>
+        <width>1024</width>
+        <height>768</height>
       </video>
       <handle>Wall</handle>
       <width>600</width>

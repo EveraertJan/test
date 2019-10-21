@@ -24,4 +24,56 @@
       <videoWidth>1</videoWidth>
       <videoHeight>1</videoHeight>
     </marker>
+
+
+    <marker>
+      <ID>299</ID>
+      <scale>2</scale>
+      <outputX>-100</outputX>
+      <outputY>-100</outputY>
+      <outputWidth>200</outputWidth>
+      <outputHeight>200</outputHeight>
+      <videoX>0</videoX>
+      <videoY>0</videoY>
+      <videoWidth>350</videoWidth>
+      <videoHeight>350</videoHeight>
+    </marker>
+    <marker>
+      <ID>341</ID>
+      <scale>2</scale>
+      <outputX>-100</outputX>
+      <outputY>-100</outputY>
+      <outputWidth>200</outputWidth>
+      <outputHeight>200</outputHeight>
+      <videoX>350</videoX>
+      <videoY>0</videoY>
+      <videoWidth>350</videoWidth>
+      <videoHeight>350</videoHeight>
+    </marker>
+
+
+    <marker>
+      <ID>64</ID>
+      <scale>2</scale>
+      <outputX>-100</outputX>
+      <outputY>-100</outputY>
+      <outputWidth>200</outputWidth>
+      <outputHeight>200</outputHeight>
+      <videoX>0</videoX>
+      <videoY>0</videoY>
+      <videoWidth>700</videoWidth>
+      <videoHeight>700</videoHeight>
+    </marker>
+    <marker>
+      <ID>908</ID>
+      <scale>2</scale>
+      <outputX>-100</outputX>
+      <outputY>-100</outputY>
+      <outputWidth>200</outputWidth>
+      <outputHeight>200</outputHeight>
+      <videoX>0</videoX>
+      <videoY>0</videoY>
+      <videoWidth>700</videoWidth>
+      <videoHeight>700</videoHeight>
+    </marker>
 </markers>

@@ -54,7 +54,7 @@ void ArucoHandler::update() {
     }
 }
 
-void ArucoHandler::draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA) {
+void ArucoHandler::draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA, bool DISPLAY_MARKERS) {
     if(DISPLAY_CAMERA) {
         trackVideo->draw(0, 0, ofGetWidth(), ofGetHeight());
     }
@@ -62,17 +62,20 @@ void ArucoHandler::draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA) {
     for(int i = 0; i < markers.size(); i++) {
         
         aruco.begin(i);
-//        drawMarker(0.15, ofColor::white, markers.at(i).id);
-        
         for(int j = 0; j < markerList.size(); j++) {
             if(markerList.at(j).id == markers.at(i).id) {
                 MarkerClass m = markerList.at(j);
                 surfaces.draw(m.outputX, m.outputY, m.outputWidth, m.outputHeight, 0, m.scale, m.videoX, m.videoY, m.videoWidth, m.videoHeight);
             }
         }
+        if(DISPLAY_MARKERS) {
+            drawMarker(0.15, ofColor::white, markers.at(i).id);
+        }
         
         aruco.end();
     }
+    
+    
 }
 
 
@@ -84,7 +87,6 @@ void ArucoHandler::setupSurfaces() {
         for(int j = 0; j < numberOfMarkers; j++){
             xml.pushTag("marker", j);
             MarkerClass marker;
-            std::cout << "xml scale: " <<  xml.getValue("scale", 1) << endl;
 
             marker.setup(xml.getValue("ID", 0), xml.getValue("outputX", 0), xml.getValue("outputY", 0), xml.getValue("outputWidth", 0), xml.getValue("outputHeight", 0), xml.getValue("videoX", 0), xml.getValue("videoY", 0), xml.getValue("videoWidth", 0), xml.getValue("videoHeight", 0), xml.getValue("scale", 1));
             markerList.push_back(marker);

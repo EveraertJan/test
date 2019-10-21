@@ -24,7 +24,7 @@ public:
     
     void setup();
     void update();
-    void draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA);
+    void draw(SurfaceGenerator surfaces, bool DISPLAY_CAMERA, bool DISPLAY_MARKERS);
     void setupSurfaces();
     
     ofxAruco aruco;

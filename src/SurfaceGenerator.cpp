@@ -10,8 +10,6 @@
 void SurfaceGenerator::setup() {
     ofEnableAlphaBlending();
     
-
-    
     background.load("water/background.mp4");
     background.play();
     foreground.load("water/foreground.mp4");
@@ -23,14 +21,11 @@ void SurfaceGenerator::setup() {
     interactionMask.load("water/interactionMask.mp4");
     interactionMask.play();
     
-    
-    
     videoFBO.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     
     videoFBO.begin();
     ofClear(0, 0, 0, 0);
     videoFBO.end();
-
 }
 
 void SurfaceGenerator::update() {
@@ -66,24 +61,22 @@ void SurfaceGenerator::update() {
     foreground.draw(0, 0,1024, 512);
     fgresult.end();
     fgresult.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-
-    
-    
-    ofTexture intMask;
-    intMask.allocate(1024, 512, GL_RGBA);
-    ofPixels inMask = interactionMask.getPixels();
-    inMask.resize(1024, 512);
-    inMask.setImageType(OF_IMAGE_COLOR_ALPHA);
-    inMask.setChannel(3, inMask.getChannel(0));
-    intMask.loadData(inMask);
-    ofFbo intResult;
-    intResult.allocate(1024, 512, GL_RGBA);
-    intResult.getTexture().setAlphaMask(intMask);
-    intResult.begin();
-    ofClear(0, 0, 0, 0);
-    interaction.draw(0, 0,1024, 512);
-    intResult.end();
-    intResult.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+//
+//    ofTexture intMask;
+//    intMask.allocate(1024, 512, GL_RGBA);
+//    ofPixels inMask = interactionMask.getPixels();
+//    inMask.resize(1024, 512);
+//    inMask.setImageType(OF_IMAGE_COLOR_ALPHA);
+//    inMask.setChannel(3, inMask.getChannel(0));
+//    intMask.loadData(inMask);
+//    ofFbo intResult;
+//    intResult.allocate(1024, 512, GL_RGBA);
+//    intResult.getTexture().setAlphaMask(intMask);
+//    intResult.begin();
+//    ofClear(0, 0, 0, 0);
+//    interaction.draw(0, 0,1024, 512);
+//    intResult.end();
+//    intResult.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
     
     
     
@@ -94,8 +87,6 @@ void SurfaceGenerator::update() {
 }
 
 void SurfaceGenerator::draw(int drawX, int drawY, int drawWidth, int drawHeight, int SOURCE, float scale, int subX, int subY, int subWidth, int subHeight) {
-    
-    
     ofPushMatrix();
     ofScale(scale);
     videoFBO.getTexture().drawSubsection(drawX, drawY, drawWidth, drawHeight, subX, subY, subWidth, subHeight);
@@ -104,7 +95,6 @@ void SurfaceGenerator::draw(int drawX, int drawY, int drawWidth, int drawHeight,
 }
 
 void SurfaceGenerator::loadNewSource(string source) {
-    
     background.load(source + "/background.mp4");
     background.play();
     foreground.load(source + "/foreground.mp4");
@@ -115,7 +105,6 @@ void SurfaceGenerator::loadNewSource(string source) {
     interaction.play();
     interactionMask.load(source + "/interactionMask.mp4");
     interactionMask.play();
-    
 }
 
 

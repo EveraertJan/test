@@ -25,7 +25,7 @@ void ofApp::update(){
 void ofApp::draw(){
     ofClear(0, 0, 0);
     if(DISPLAY_MODE == 0) {
-        aruco.draw(surfaceGenerator, DISPLAY_CAMERA);
+        aruco.draw(surfaceGenerator, DISPLAY_CAMERA, DISPLAY_MARKERS);
     }
     else {
         presets.draw(surfaceGenerator, DISPLAY_MODE);
@@ -49,6 +49,7 @@ void ofApp::keyPressed(int key){
     }
     if(key == 'v') {
         DISPLAY_CAMERA = !DISPLAY_CAMERA;
+        DISPLAY_MARKERS = !DISPLAY_MARKERS;
     }
     
     if(key == 'w'){
